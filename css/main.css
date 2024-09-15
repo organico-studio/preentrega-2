@@ -1,0 +1,369 @@
+/* reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* estilos generales */
+
+html, body{
+    height: 100%;
+}
+  
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    align-content: center;
+    padding: 10px;    
+}
+
+h1{
+    font-family: "Proxima Nova";
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+h3, h5{
+    font-family: "Proxima Nova";
+    color: #666666;
+    font-weight: bold;
+}
+
+p{
+    font-family: "Proxima Nova";
+    color: #666666;
+}
+
+
+/* estilos de header */
+
+.white-bg{
+    background-color: white;
+}
+
+.logotipo{
+    height: 50px;
+    margin-left: 10px;
+}
+
+.bold-act{
+    font-weight: 500;
+}
+
+.bold-hov:hover{
+    font-weight: 600;
+}
+
+header nav div div ul li{
+    font-family: "Advent Pro";
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0px 10px;
+    color: #666666;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* estilos de home */
+
+.intro-txt{
+    text-align: center;
+    margin: 30px;
+}
+
+.intro-txt img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.boton-portafolio{
+    font-family: "Proxima Nova";
+    color: white;
+    background-color: #6C98BC;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.boton-portafolio:hover{
+    font-weight: bold;
+}
+
+    /* estilos de home - tablet & desktop */
+
+    @media screen and (min-width: 600px){
+  
+        .intro-txt{
+            margin: auto;
+            max-width: 600px;
+        }        
+    }
+
+
+/* estilos de portafolio */
+
+.portafolio{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+  
+.portafolio-img{
+    position: relative;
+    width: 100%;
+}
+  
+.portafolio-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+  
+.portafolio-img:hover img{
+    opacity: 0.10;
+}
+  
+.portafolio-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.portafolio-img:hover .portafolio-txt{
+    opacity: 1;
+}
+
+    /* estilos de portafolio - tablet */
+
+    @media screen and (min-width: 600px){
+        
+        .portafolio{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    /* estilos de portafolio - desktop */
+
+    @media screen and (min-width: 1200px){
+  
+        .portafolio{
+            grid-template-columns: repeat(3,1fr);
+        }        
+    }
+
+
+/* estilos de servicios */
+
+.servicios-cat{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0px 10px;
+    gap: 10px;
+}
+
+.servicios-intro, .clientes-txt{
+    text-align: left;
+}
+
+.servicios-txt{
+    margin-top: 20px;
+    border-top: #6C98BC solid 10px;
+    text-align: left;
+    line-height: 10px;
+}
+
+.servicios-txt h5{
+    margin: 10px 0px;
+}
+
+    /* estilos de servicios - tablet */
+
+    @media screen and (min-width: 600px){
+  
+        .servicios-cat{
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            margin: 0px auto;
+            padding: 0px 20px 20px 20px;
+            gap: 0px 20px;
+        }
+
+        .servicios-cat h1, .servicios-intro{
+            grid-column: span 2;
+        }
+
+        .clientes{
+            justify-content: center;
+            margin: 0px auto;
+            padding: 0px 20px 20px 20px;
+            gap: 0px 20px;
+        }        
+    }
+
+    /* estilos de servicios - desktop */
+
+    @media screen and (min-width: 1200px){
+  
+        .servicios-intro, .clientes-txt{
+            max-width: 1200px;
+            justify-content: center;
+            margin: auto;
+        }
+        
+        .servicios-cat{
+            max-width: 1200px;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        .servicios-cat h1, .servicios-intro{
+            grid-column: span 4;
+        }
+    }
+
+
+/* estilos de nosotros */
+
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0px 10px;
+    gap: 10px;
+    text-align: center;
+}
+
+.nosotros-img{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.nosotros h3, .nosotros h5{
+    text-align: center;
+}
+
+.nosotros p{
+    text-align: left;
+}
+
+    /* estilos de nosotros - tablet */
+
+    @media screen and (min-width: 600px){
+  
+        .nosotros{
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            margin: 0 auto;
+            gap: 0px 50px;
+            padding: 0px 50px;
+        }
+
+        .nosotros h1{
+            grid-column: span 2;
+        }
+    }
+
+    /* estilos de nosotros - desktop */    
+
+    @media screen and (min-width: 1200px){
+        
+        .nosotros{
+            max-width: 1200px;
+        }
+    }    
+
+/* estilos de contacto */
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto form fieldset{
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.contacto form fieldset legend{
+    font-family: "Proxima Nova";
+    color: #AEAEAE;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contacto form fieldset div{
+    padding: 10px 0px;
+}
+
+.formulario-campo{
+    font-family: "Proxima Nova";
+    background-color: #AEAEAE;
+    width: 100%;
+    height: 25px;
+    border: none;
+}
+
+.contacto form fieldset div textarea{
+    font-family: "Proxima Nova";
+    background-color: #AEAEAE;
+    width: 100%;
+    border: none;
+}
+
+.boton-contacto{
+    background-color: #6C98BC;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.boton-contacto:hover{
+    font-weight: bold;
+}
+
+
+/* estilos de footer */
+
+footer{
+    padding: 10px 20px;
+}
+
+footer img{
+    height: 40px;
+}
+
+footer p{
+    font-size: 10px;
+    color: #AEAEAE;
+    margin-left: 10px;
+}
+
+.aviso-privacidad{
+    color: #AEAEAE;
+    font-weight: bold;
+    text-decoration: none;
+}
